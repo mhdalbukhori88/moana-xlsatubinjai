@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="space-y-4">
             <a href="#beranda" className="inline-block">
               <Image
-                src="/logo.png"
+                src="/logo-white.png"
                 alt="XL Satu Binjai"
                 width={150}
                 height={50}
