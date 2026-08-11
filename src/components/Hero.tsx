@@ -33,17 +33,16 @@ export default function Hero() {
             Internet Rumah{" "}
             <span className="relative">
               <span className="relative z-10 bg-gradient-to-r from-secondary-light to-white bg-clip-text text-transparent">
-                Unlimited
+                Super Cepat
               </span>
               <span className="absolute -bottom-2 left-0 h-3 w-full bg-secondary/30 rounded-full blur-md" />
             </span>
             <br />
-            untuk Binjai
+            dari XLSMART FTTH!
           </h1>
 
           <p className="mb-8 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg lg:max-w-xl">
-            Nikmati koneksi fiber optic super cepat dari <strong className="text-white">XL SATU</strong> untuk 
-            streaming, gaming, dan kerja dari rumah. Instalasi cepat, harga transparan, langsung dari sales resmi.
+            Internet lemot bikin kerja, belajar, atau streaming jadi terganggu? Saatnya upgrade ke <strong className="text-white">XL SATU SPARK FTTH Internet Only</strong> dengan koneksi cepat, stabil, dan terpercaya!
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">

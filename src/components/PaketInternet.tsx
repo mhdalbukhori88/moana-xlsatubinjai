@@ -1,68 +1,97 @@
 "use client";
 
+import Image from "next/image";
+
 const packages = [
   {
-    name: "XL SATU Lite",
-    speed: "50",
-    price: "250.000",
+    name: "Starter",
+    speed: "20",
+    price: "205.350",
     popular: false,
     features: [
-      "Internet Unlimited 50 Mbps",
+      "Internet Unlimited 20 Mbps",
       "WiFi Router Gratis",
-      "Bonus Kuota HP 5 GB",
-      "Cocok untuk 3-5 perangkat",
-      "Streaming HD lancar",
+      "Termasuk PPN 11%",
+      "Cocok untuk rumah",
+      "Streaming tanpa buffering",
     ],
     color: "from-support to-secondary",
     ringColor: "ring-support/20",
   },
   {
-    name: "XL SATU Max",
-    speed: "100",
-    price: "330.000",
+    name: "SPARK 250",
+    speed: "250",
+    price: "254.190",
     popular: true,
     features: [
-      "Internet Unlimited 100 Mbps",
-      "WiFi Router Dual Band",
-      "Bonus Kuota HP 15 GB",
-      "Cocok untuk 5-8 perangkat",
-      "Streaming 4K + Gaming",
+      "Internet Unlimited 250 Mbps",
+      "WiFi Router Gratis",
+      "Termasuk PPN 11%",
       "Gratis Biaya Instalasi",
+      "Streaming HD & Gaming",
     ],
     color: "from-primary to-support",
     ringColor: "ring-primary/20",
   },
   {
-    name: "XL SATU Pro",
-    speed: "200",
-    price: "450.000",
+    name: "SPARK 350",
+    speed: "350",
+    price: "309.690",
     popular: false,
     features: [
-      "Internet Unlimited 200 Mbps",
-      "WiFi Mesh Router",
-      "Bonus Kuota HP 30 GB",
-      "Cocok untuk 8-12 perangkat",
-      "Ultra HD Streaming + WFH",
+      "Internet Unlimited 350 Mbps",
+      "WiFi Router Gratis",
+      "Termasuk PPN 11%",
       "Gratis Biaya Instalasi",
+      "Cocok untuk keluarga besar",
     ],
     color: "from-secondary to-primary",
     ringColor: "ring-secondary/20",
   },
   {
-    name: "XL SATU Ultra",
-    speed: "300",
-    price: "550.000",
+    name: "SPARK 400",
+    speed: "400",
+    price: "333.000",
     popular: false,
     features: [
-      "Internet Unlimited 300 Mbps",
-      "WiFi 6 Mesh System",
-      "Bonus Kuota HP 50 GB Sekeluarga",
-      "Unlimited Perangkat",
-      "Priority Support 24/7",
-      "Gratis Instalasi + 1 Bulan",
+      "Internet Unlimited 400 Mbps",
+      "WiFi Router Gratis",
+      "Termasuk PPN 11%",
+      "Gratis Biaya Instalasi",
+      "Ultra HD Streaming + WFH",
     ],
     color: "from-primary-dark to-primary",
     ringColor: "ring-primary-dark/20",
+  },
+  {
+    name: "SPARK 600",
+    speed: "600",
+    price: "555.000",
+    popular: false,
+    features: [
+      "Internet Unlimited 600 Mbps",
+      "WiFi Router Gratis",
+      "Termasuk PPN 11%",
+      "Gratis Biaya Instalasi",
+      "Cocok untuk UMKM / Kantor",
+    ],
+    color: "from-support to-secondary",
+    ringColor: "ring-support/20",
+  },
+  {
+    name: "SPARK 1000",
+    speed: "1000",
+    price: "999.000",
+    popular: false,
+    features: [
+      "Internet Unlimited 1000 Mbps",
+      "WiFi Router Gratis",
+      "Termasuk PPN 11%",
+      "Gratis Biaya Instalasi",
+      "Priority Support 24/7",
+    ],
+    color: "from-primary to-primary-dark",
+    ringColor: "ring-primary/20",
   },
 ];
 
@@ -84,21 +113,27 @@ export default function PaketInternet() {
           <h2 className="mb-4 text-3xl font-bold text-primary sm:text-4xl lg:text-5xl">
             Pilih Paket Internet Terbaik
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-text-muted sm:text-lg">
-            Temukan paket yang sesuai kebutuhan rumah Anda. Semua paket sudah termasuk WiFi router dan kuota HP sekeluarga.
-          </p>
+          <div className="mx-auto max-w-2xl text-base text-text-muted sm:text-lg space-y-4 text-left sm:text-center">
+            <p>
+              Tersedia pilihan hingga 1000 Mbps! Cocok untuk rumah, keluarga, UMKM, kantor, hingga bisnis. 
+              Nikmati streaming tanpa buffering, rapat online lancar, gaming lebih responsif, serta unduh & unggah super cepat.
+            </p>
+            <div className="inline-flex flex-col items-center justify-center gap-1 mt-2 p-4 bg-yellow-50 rounded-xl border border-yellow-200">
+              <p className="font-semibold text-yellow-800">⚡ Promo berlaku untuk pelanggan baru di area XL Footprint.</p>
+              <p className="text-sm font-medium text-yellow-700">📍 Khusus untuk wilayah Kota Binjai</p>
+            </div>
+          </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {packages.map((pkg, index) => (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+          {packages.map((pkg) => (
             <div
               key={pkg.name}
               className={`group relative flex flex-col rounded-3xl bg-white p-6 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${
                 pkg.popular
-                  ? "ring-2 ring-primary scale-[1.02] lg:scale-105"
+                  ? "ring-2 ring-primary scale-[1.02] lg:scale-105 z-10"
                   : "ring-1 ring-gray-100"
               }`}
-              style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Popular badge */}
               {pkg.popular && (
@@ -123,7 +158,7 @@ export default function PaketInternet() {
 
               {/* Price */}
               <div className="mb-6 text-center">
-                <div className="text-xs text-text-muted">Mulai dari</div>
+                <div className="text-xs text-text-muted">Hanya</div>
                 <div className="flex items-baseline justify-center gap-1">
                   <span className="text-sm font-medium text-text-muted">Rp</span>
                   <span className="text-3xl font-extrabold text-text">{pkg.price}</span>
@@ -145,7 +180,7 @@ export default function PaketInternet() {
 
               {/* CTA */}
               <a
-                href={`https://wa.me/6285857547266?text=Halo%2C%20saya%20tertarik%20paket%20${encodeURIComponent(pkg.name)}%20${pkg.speed}%20Mbps%20seharga%20Rp${pkg.price}%2Fbulan`}
+                href={`https://wa.me/6285857547266?text=Halo%2C%20saya%20tertarik%20paket%20XL%20Satu%20${encodeURIComponent(pkg.name)}%20${pkg.speed}%20Mbps%20seharga%20Rp${pkg.price}%2Fbulan`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`flex items-center justify-center gap-2 rounded-full py-3.5 text-sm font-bold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg ${
@@ -161,6 +196,33 @@ export default function PaketInternet() {
               </a>
             </div>
           ))}
+        </div>
+
+        {/* Brochure Section */}
+        <div className="mt-20">
+          <h3 className="mb-8 text-center text-2xl font-bold text-primary sm:text-3xl">
+            Brosur Resmi XL SATU
+          </h3>
+          <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+            <div className="overflow-hidden rounded-2xl shadow-xl transition-transform duration-300 hover:scale-[1.02]">
+              <Image 
+                src="/brosur-1.png" 
+                alt="Brosur Harga XL SATU SPARK" 
+                width={800} 
+                height={1000} 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl shadow-xl transition-transform duration-300 hover:scale-[1.02]">
+              <Image 
+                src="/brosur-2.png" 
+                alt="Brosur XL SATU Fixed Wireless Access" 
+                width={800} 
+                height={1000} 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
