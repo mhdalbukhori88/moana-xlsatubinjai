@@ -9,7 +9,7 @@ export default function FeaturesBanner() {
         <div className="mx-auto max-w-5xl rounded-3xl bg-surface p-8 text-center shadow-lg sm:p-12">
           <div className="flex justify-center">
             <Image
-              src="/features-xlsatu.png"
+              src="/features-xlsatu.jpg"
               alt="Fitur XL SATU: Fiber Optic, WiFi Unlimited, Kuota HP Sekeluarga, SATU Tagihan, SATU Aplikasi"
               width={1200}
               height={300}
