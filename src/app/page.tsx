@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import FeaturesBanner from "@/components/FeaturesBanner";
 import CekJangkauan from "@/components/CekJangkauan";
 import PaketInternet from "@/components/PaketInternet";
 import KenapaKami from "@/components/KenapaKami";
@@ -14,6 +15,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Navbar />
       <Hero />
+      <FeaturesBanner />
       <CekJangkauan />
       <PaketInternet />
       <KenapaKami />
