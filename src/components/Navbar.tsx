@@ -42,7 +42,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#beranda" className="relative z-50 flex items-center gap-2">
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             alt="XL Satu Binjai"
             width={140}
             height={46}
